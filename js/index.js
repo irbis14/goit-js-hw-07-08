@@ -28,10 +28,15 @@ function createBoxes(amount) {
     divRef.append(...box);
 };
 
-function destroyBoxes() {
+/* function destroyBoxes() {
     while (divRef.firstChild) {
         divRef.removeChild(divRef.firstChild);
     };
+}; */
+
+function destroyBoxes() {
+    divRef.innerHTML = '<div id="boxes"></div>';
+    numerRef.value = '';
 };
 
 renderRef.addEventListener('click', () => {
